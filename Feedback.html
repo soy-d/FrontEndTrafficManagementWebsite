@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Feedback</title>
+        <link rel="stylesheet" type="text/css" href="feedback.css">
+        <link rel="stylesheet" type="text/css" href="miniproject.css">
+        <style>
+            body {
+                background-color: #1ef60a;
+                min-height: 100vh;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                display: grid;
+                place-content: center;
+                margin: 0;
+            }
+        </style>
+        <script>
+            function showFeedbackMessage(event) {
+                event.preventDefault();
+                document.getElementById("result").innerHTML = "Thank you! for your feedback.";
+            }
+        </script>
+    </head>
+    <body>
+         <nav>
+        <ul class="navbar">
+            <li><a href="Home.html" class="active">Home</a></li>
+            <li><a href="Local.html">Local Issues</a></li>
+            <li><a href="solution.html">Solution</a></li>
+            <li><a href="community.html">Community Event</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+        <div class="container">
+            <h1>Give your feedback</h1>
+            <p>Your thoughts help us to control the traffic in the city.</p>
+            <form onsubmit="showFeedbackMessage(event)">
+                Name: <input type="text"><br>
+                <textarea name="feedback" id="feedback" cols="30" rows="6" placeholder="Give your feedback"></textarea>
+                <div class="form-item">
+                    <input type="checkbox" id="privacy" name="privacy">
+                    <label for="privacy">This is my own idea
+                        <a href="solution.html"> for solution</a>.
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+            <div id="result" style="margin-top:1rem;color:red;font-weight:bold;"></div>
+        </div>
+    </body>
+</html>
